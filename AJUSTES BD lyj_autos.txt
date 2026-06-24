@@ -1,0 +1,32 @@
+-- AJUSTES PARA BD lyj_autos
+
+ALTER TABLE `certificacion` 
+ADD COLUMN `fechaCertificado` DATE NULL DEFAULT NULL AFTER `descripcion`;
+
+
+
+ALTER TABLE `certificacion` 
+ADD COLUMN `numSerie` INT NULL DEFAULT NULL AFTER `fechaCertificado`,
+ADD COLUMN `anioSerie` INT NULL DEFAULT NULL AFTER `numSerie`;
+
+
+ALTER TABLE eliminacion 
+ADD COLUMN numSerieMaterial INT(20) NULL AFTER numSerie;
+
+
+ALTER TABLE eliminacion
+ADD COLUMN anioSerie INT NULL AFTER numSerie,
+ADD COLUMN grupoServicio VARCHAR(10) NULL AFTER tipoServicio,
+ADD COLUMN estado TINYINT(1) NOT NULL DEFAULT 1 AFTER grupoServicio;
+
+
+ALTER TABLE anulacion
+ADD COLUMN idCertificacion INT NULL AFTER motivo,
+ADD COLUMN estado TINYINT(1) NOT NULL DEFAULT 1 AFTER idCertificacion;
+
+-- La tabla anulación se usa para las solicitud de anulación y para devolución de formatos, separar.
+
+ALTER TABLE anulacion
+ADD COLUMN idMaterial INT NULL AFTER idCertificacion,
+ADD COLUMN idNuevoMaterial INT NULL AFTER idMaterial;
+
