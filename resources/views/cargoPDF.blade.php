@@ -198,7 +198,7 @@
     </main>
     
     <footer>
-        <p>www.l&jautos.com</p>
+        <p>www.ljautosperu.com</p>
     </footer>    
 </body>
 </html>

@@ -105,7 +105,7 @@ class PdfController extends Controller
     }
 
     // VISTA Y DESCARGA FICHAS TECNICAS GLP ✅
-    public function generarFichaTecnicaGlp($id)
+    /*public function generarFichaTecnicaGlp($id)
     {
         if (Certificacion::findOrFail($id)) {
             $certificacion = Certificacion::find($id);
@@ -176,6 +176,88 @@ class PdfController extends Controller
         } else {
             return abort(404);
         }
+    }*/
+    
+    public function generarFichaTecnicaGlp($idCert)
+    {
+        // Cambiamos a findOrFail directo para evitar la doble consulta innecesaria
+        $certificacion = Certificacion::findOrFail($idCert);
+        
+        $meses = array(
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+            "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+        );
+
+        // Ajustamos a tus relaciones exactas del modelo (Vehiculo, Taller, TallerAuto, Materiales)
+        $equipos = $certificacion->Vehiculo->Equipos->where("idTipoEquipo", ">", 3)->sortBy("idTipoEquipo");
+        
+        $hoja = $certificacion->Materiales->where('idTipoMaterial', 3)->first();
+        
+        // Si no hay hoja asignada, evitamos que la app muera con un 'non-object'
+        $numeroDeHoja = $hoja ? $this->completarConCeros($hoja->numSerie) : '00000';
+        
+        $cargaUtil = $this->calculaCargaUtil($certificacion->Vehiculo->pesoBruto, $certificacion->Vehiculo->pesoNeto);
+        
+        $fechaCert = $certificacion->fecha_documento;
+        $fec = $fechaCert ? $fechaCert->format("d/m/Y") : now()->format("d/m/Y");
+
+        $data = [
+            "fecha" => $fec,
+            "empresa" => "L&J AUTOS S.A.C.",
+            "carro" => $certificacion->Vehiculo,
+            "taller" => $certificacion->Taller,
+            "tallerauto" => $certificacion->TallerAuto,
+            "servicio" => $certificacion->Servicio,
+            "numSerie" => $this->completarConCeros($certificacion->numSerie),
+            "anioSerie" => $certificacion->anioSerie,
+            "cargaUtil" => $cargaUtil,
+            "hoja" => $hoja,
+            "numHoja" => $numeroDeHoja,
+            "equipos" => $equipos,
+        ];
+
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadView('fichaTecnicaGlp', $data);
+        
+        return $pdf->stream("FT-" . $certificacion->Vehiculo->placa . '-' . $numeroDeHoja . '-glp.pdf');
+    }
+
+    public function descargarFichaTecnicaGlp($idCert)
+    {
+        $certificacion = Certificacion::findOrFail($idCert);
+        
+        $meses = array(
+            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+            "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+        );
+
+        $equipos = $certificacion->Vehiculo->Equipos->where("idTipoEquipo", ">", 3)->sortBy("idTipoEquipo");
+        $hoja = $certificacion->Materiales->where('idTipoMaterial', 3)->first();
+        $numeroDeHoja = $hoja ? $this->completarConCeros($hoja->numSerie) : '00000';
+        
+        $cargaUtil = $this->calculaCargaUtil($certificacion->Vehiculo->pesoBruto, $certificacion->Vehiculo->pesoNeto);
+        $fechaCert = $certificacion->fecha_documento;
+        $fec = $fechaCert ? $fechaCert->format("d/m/Y") : now()->format("d/m/Y");
+
+        $data = [
+            "fecha" => $fec,
+            "empresa" => "L&J AUTOS S.A.C.",
+            "carro" => $certificacion->Vehiculo,
+            "taller" => $certificacion->Taller,
+            "tallerauto" => $certificacion->TallerAuto,
+            "servicio" => $certificacion->Servicio,
+            "numSerie" => $this->completarConCeros($certificacion->numSerie),
+            "anioSerie" => $certificacion->anioSerie,
+            "cargaUtil" => $cargaUtil,
+            "hoja" => $hoja,
+            "numHoja" => $numeroDeHoja,
+            "equipos" => $equipos,
+        ];
+
+        $pdf = App::make('dompdf.wrapper');
+        $pdf->loadView('fichaTecnicaGlp', $data);
+        
+        return $pdf->download("FT-" . $certificacion->Vehiculo->placa . '-' . $numeroDeHoja . '-glp.pdf');
     }
 
 

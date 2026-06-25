@@ -93,7 +93,7 @@
         <p><strong>Fecha: </strong> {{$fecha}}</p>
         <p><strong>Servicio: </strong>{{'Certificado de '.$servicio->tipoServicio->descripcion.'.'}}</p>
         {{--<p><strong>N° de Certificado: </strong>{{$numHoja}}</p>--}}
-        <p><strong>N° de Certificado: </strong>{{$numSerie}}</p>
+        <p><strong>N° de Certificado: </strong> {{ $numSerie }}</p>
 
         <!-- DATOS VEHICULO -->
         <h5 style="background-color:goldenrod;">DATOS DEL VEHICULO</h5>

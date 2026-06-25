@@ -505,7 +505,6 @@ class Certificacion extends Model
     }
 
 
-
     public function getChipMaterialAttribute()
     {
         $chip = Certificacion::find($this->attributes['id'])->Materiales->where('idTipoMaterial', 2)->first();
