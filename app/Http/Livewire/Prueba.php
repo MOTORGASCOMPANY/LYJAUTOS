@@ -371,7 +371,8 @@ class Prueba extends Component
             ]);
 
             $this->guardarFotos($expe);
-            guardarArchivosEnExpediente::dispatch($expe, $certi);
+            
+            //guardarArchivosEnExpediente::dispatch($expe, $certi);
 
             $certEx = CertifiacionExpediente::create(["idCertificacion" => $certi->id, "idExpediente" => $expe->id]);
 
@@ -453,7 +454,7 @@ class Prueba extends Component
             $this->guardarFotos($expe);
 
             // Llama a Jobs guardarArchivosEnExpediente.php -> Jobs Llama a Trait pdfTrait
-            //guardarArchivosEnExpediente::dispatch($expe, $certi); Llama
+            //guardarArchivosEnExpediente::dispatch($expe, $certi);
 
             $certEx = CertifiacionExpediente::create(["idCertificacion" => $certi->id, "idExpediente" => $expe->id]);
 
@@ -508,7 +509,8 @@ class Prueba extends Component
             ]);
 
             $this->guardarFotos($expe);
-            guardarArchivosEnExpediente::dispatch($expe, $certi);
+
+            //guardarArchivosEnExpediente::dispatch($expe, $certi);
 
             $certEx = CertifiacionExpediente::create(["idCertificacion" => $certi->id, "idExpediente" => $expe->id]);
 
@@ -732,7 +734,8 @@ class Prueba extends Component
                             ]);
 
                             $this->guardarFotos($expe);
-                            guardarArchivosEnExpediente::dispatch($expe, $certi);
+
+                            //guardarArchivosEnExpediente::dispatch($expe, $certi);
 
                             $certEx = CertifiacionExpediente::create(["idCertificacion" => $certi->id, "idExpediente" => $expe->id]);
 
@@ -795,7 +798,8 @@ class Prueba extends Component
                             ]);
 
                             $this->guardarFotos($expe);
-                            guardarArchivosEnExpediente::dispatch($expe, $certi);
+                            
+                            //guardarArchivosEnExpediente::dispatch($expe, $certi);
 
                             $certEx = CertifiacionExpediente::create(["idCertificacion" => $certi->id, "idExpediente" => $expe->id]);
 
