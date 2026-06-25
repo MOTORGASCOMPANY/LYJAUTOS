@@ -684,7 +684,7 @@ class PdfController extends Controller
                     $equipos = $certificacion->Vehiculo->Equipos->where("idTipoEquipo", ">", 3)->sortBy("idTipoEquipo");
                     $cargaUtil = $this->calculaCargaUtil($certificacion->Vehiculo->pesoBruto, $certificacion->Vehiculo->pesoNeto);
                     // Genera el código QR
-                    $urlDelDocumento = 'www.ljautosperu.com' . route('verPdfAnualGlp', $id, false); // Reemplaza 'certificadoAnualGnv' con el nombre correcto de tu ruta
+                    $urlDelDocumento = 'www.ljautosperu.com' . route('verPdfAnualGlp', $id, false);
                     $qrCode = QrCode::size(70)->generate($urlDelDocumento);
                     $data = [
                         "fecha" => $fecha,

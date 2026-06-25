@@ -672,7 +672,7 @@
                                                     <i class="fas fa-download"></i>
                                                     <span>desc. Certificado</span>
                                                 </a>
-                                                {{-- 
+                                                
                                                 @if ($certificacion->Servicio->tipoServicio->id != 8 && $certificacion->Servicio->tipoServicio->id != 9 && $certificacion->Servicio->tipoServicio->id != 5 && $certificacion->Servicio->tipoServicio->id != 11)
                                                     <a href="{{ $certificacion->rutaVistaFt }}" target="__blank" rel="noopener noreferrer"
                                                         class="flex px-4 py-2 text-sm text-indigo-700 hover:bg-slate-600 hover:text-white justify-between items-center hover:cursor-pointer">
@@ -695,7 +695,6 @@
                                                         <span>CheckList Abajo</span>
                                                     </a>
                                                 @endif
-                                                --}}
                                             </div>
                                         </div>
 

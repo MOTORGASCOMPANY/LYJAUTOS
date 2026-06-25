@@ -451,7 +451,9 @@ class Prueba extends Component
             ]);
 
             $this->guardarFotos($expe);
-            guardarArchivosEnExpediente::dispatch($expe, $certi);
+
+            // Llama a Jobs guardarArchivosEnExpediente.php -> Jobs Llama a Trait pdfTrait
+            //guardarArchivosEnExpediente::dispatch($expe, $certi); Llama
 
             $certEx = CertifiacionExpediente::create(["idCertificacion" => $certi->id, "idExpediente" => $expe->id]);
 
