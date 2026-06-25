@@ -105,7 +105,7 @@ class PdfController extends Controller
     }
 
     // VISTA Y DESCARGA FICHAS TECNICAS GLP ✅
-    /*public function generarFichaTecnicaGlp($id)
+    public function generarFichaTecnicaGlp($id)
     {
         if (Certificacion::findOrFail($id)) {
             $certificacion = Certificacion::find($id);
@@ -176,9 +176,9 @@ class PdfController extends Controller
         } else {
             return abort(404);
         }
-    }*/
+    }
     
-    public function generarFichaTecnicaGlp($idCert)
+    /*public function generarFichaTecnicaGlp($idCert)
     {
         // Cambiamos a findOrFail directo para evitar la doble consulta innecesaria
         $certificacion = Certificacion::findOrFail($idCert);
@@ -221,7 +221,6 @@ class PdfController extends Controller
         
         return $pdf->stream("FT-" . $certificacion->Vehiculo->placa . '-' . $numeroDeHoja . '-glp.pdf');
     }
-
     public function descargarFichaTecnicaGlp($idCert)
     {
         $certificacion = Certificacion::findOrFail($idCert);
@@ -258,7 +257,7 @@ class PdfController extends Controller
         $pdf->loadView('fichaTecnicaGlp', $data);
         
         return $pdf->download("FT-" . $certificacion->Vehiculo->placa . '-' . $numeroDeHoja . '-glp.pdf');
-    }
+    }*/
 
 
     // VISTA CHECKLIST ARRIBA GNV ✅
