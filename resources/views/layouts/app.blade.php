@@ -24,14 +24,10 @@
     <link href="{{ asset('css/pikaday.css') }}" rel="stylesheet">
     --}}
 
-    @fcStyles
-    <link href="https://unpkg.com/filepond/dist/filepond.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css" rel="stylesheet">
-
     @stack('styles')
 
     @livewireStyles
-    {{--@livewireScripts--}}
+    @livewireScripts
 
     <!-- Scripts
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
@@ -63,13 +59,9 @@
     <!-- 
     <script src="https://kit.fontawesome.com/d1db4754d0.js" crossorigin="anonymous"></script>
     -->
-    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
-    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
-    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @fcScripts
-    @livewireScripts
     @stack('js')
 
     <script>
