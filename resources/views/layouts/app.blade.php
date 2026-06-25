@@ -24,11 +24,14 @@
     <link href="{{ asset('css/pikaday.css') }}" rel="stylesheet">
     --}}
 
+    @fcStyles
+    <link href="https://unpkg.com/filepond/dist/filepond.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css" rel="stylesheet">
 
     @stack('styles')
 
     @livewireStyles
-    @livewireScripts
+    {{--@livewireScripts--}}
 
     <!-- Scripts
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
@@ -53,21 +56,21 @@
             {{ $slot }}
         </main>
 
-
-
-
     </div>
+
     @vite(['resources/css/app.css','resources/js/app.js'])
     @stack('modals')
     <!-- 
     <script src="https://kit.fontawesome.com/d1db4754d0.js" crossorigin="anonymous"></script>
     -->
+    <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     @fcScripts
+    @livewireScripts
     @stack('js')
-
-
 
     <script>
         livewire.on('alert', function(message) {
@@ -77,8 +80,52 @@
                 'success'
             )
         });
+
+        livewire.on('CustomAlert', function(params) {
+            Swal.fire(
+                params["titulo"],
+                params["mensaje"],
+                params["icono"],
+            )
+        });
+
+        const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        });
+
+        livewire.on('minAlert', function(params) {
+            Toast.fire(
+                params["titulo"],
+                params["mensaje"],
+                params["icono"],
+            )
+        });
+
+        Livewire.on('updateChart', data => {
+            const chart1 = document.getElementById(data["nombre"]);
+            chart1.data = data["data"];
+            chart1.update();
+        });
     </script>
 
+    {{-- 
+    <script>
+        livewire.on('alert', function(message) {
+            Swal.fire(
+                'Buen trabajo!',
+                message,
+                'success'
+            )
+        });
+    </script>
     <script>
         livewire.on('CustomAlert', function(params) {
             Swal.fire(
@@ -88,8 +135,6 @@
             )
         });
     </script>
-
-
     <script>
         const Toast = Swal.mixin({
         toast: true,
@@ -110,7 +155,6 @@
             )
         });
     </script>
-
     <script>
         Livewire.on('updateChart', data => {
             const chart1=document.getElementById(data["nombre"]);
@@ -118,11 +162,13 @@
             chart1.update();
         });
     </script>
-<footer>
-    <div class="text-xs text-slate-700  float-right">
-        Powered by GHFDEV ®
-    </div>
-</footer>
+    --}}
+    
+    <footer>
+        <div class="text-xs text-slate-700  float-right">
+            Powered by GHFDEV ®
+        </div>
+    </footer>
 
 </body>
 
