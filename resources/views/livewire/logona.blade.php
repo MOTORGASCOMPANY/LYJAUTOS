@@ -213,8 +213,7 @@
                             <table class="min-w-full border text-center text-sm font-medium rounded-xl overflow-hidden">
                                 <thead>
                                     <tr>
-                                        <th colspan="9"
-                                            class="text-center text-indigo-600 text-xl font-bold py-4 bg-indigo-100">
+                                        <th colspan="9" class="text-center text-indigo-600 text-xl font-bold py-4 bg-indigo-100">
                                             Talleres Diarios
                                         </th>
                                     </tr>
@@ -255,53 +254,54 @@
                                                 {{ $data['porcentaje_pagado'] }}%
                                             </td>
                                             --}}
-                                            @if (!empty($data['boletas_ids']))
-                                                @foreach ($data['boletas_ids'] as $boleta)
-                                                    <td class="py-3 border-r">
-                                                        <div class="relative group inline-block">
-                                                            <a href="{{ route('generaPdfBoleta', ['id' => $boleta['id']]) }}" target="_blank"
-                                                                class="group inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-300 text-white font-bold cursor-pointer hover:bg-indigo-600 hover:animate-pulse">
-                                                                <i class="fa-solid fa-file-pdf"></i>
-                                                            </a>
-                                                                <!-- Tooltip -->
-                                                            <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block
-                                                                        bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap shadow-lg">
-                                                                Fecha: {{ \Carbon\Carbon::parse($boleta['fechaInicio'])->format('d/m/Y') }}
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                    {{-- 
-                                                    @switch($boleta['auditoria'])
-                                                            @case(0)
-                                                                <td class="px-5 py-5 border-b border-gray-200 text-sm">
-                                                                    <span
-                                                                        class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
-                                                                        <span aria-hidden
-                                                                            class="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
-                                                                        <span class="relative">Por revisar</span>
-                                                                    </span>
-                                                                </td>
-                                                            @break
+                                            <td class="px-4 py-3 border-r">
+                                                <div class="flex items-center justify-center space-x-2"> 
+                                                    @if (!empty($data['boletas_ids']))
+                                                        @foreach ($data['boletas_ids'] as $boleta)                                                            
+                                                                <div class="relative group inline-block">
+                                                                    <a href="{{ route('generaPdfBoleta', ['id' => $boleta['id']]) }}" target="_blank"
+                                                                        class="group inline-flex items-center justify-center w-8 h-8 rounded-full bg-indigo-300 text-white font-bold cursor-pointer hover:bg-indigo-600 hover:animate-pulse">
+                                                                        <i class="fa-solid fa-file-pdf"></i>
+                                                                    </a>
+                                                                    <!-- Tooltip -->
+                                                                    <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 hidden group-hover:block
+                                                                                bg-gray-800 text-white text-xs rounded px-2 py-1 whitespace-nowrap shadow-lg">
+                                                                        Fecha: {{ \Carbon\Carbon::parse($boleta['fechaInicio'])->format('d/m/Y') }}
+                                                                    </div>
+                                                                </div>
+                                                            {{-- 
+                                                            @switch($boleta['auditoria'])
+                                                                    @case(0)
+                                                                        <td class="px-5 py-5 border-b border-gray-200 text-sm">
+                                                                            <span
+                                                                                class="relative inline-block px-3 py-1 font-semibold text-red-900 leading-tight">
+                                                                                <span aria-hidden
+                                                                                    class="absolute inset-0 bg-red-200 opacity-50 rounded-full"></span>
+                                                                                <span class="relative">Por revisar</span>
+                                                                            </span>
+                                                                        </td>
+                                                                    @break
 
-                                                            @case(1)
-                                                                <td class="px-5 py-5 border-b border-gray-200 text-sm">
-                                                                    <span
-                                                                        class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
-                                                                        <span aria-hidden
-                                                                            class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
-                                                                        <span class="relative">Aprobado</span>
-                                                                    </span>
-                                                                </td>
-                                                            @break
+                                                                    @case(1)
+                                                                        <td class="px-5 py-5 border-b border-gray-200 text-sm">
+                                                                            <span
+                                                                                class="relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight">
+                                                                                <span aria-hidden
+                                                                                    class="absolute inset-0 bg-green-200 opacity-50 rounded-full"></span>
+                                                                                <span class="relative">Aprobado</span>
+                                                                            </span>
+                                                                        </td>
+                                                                    @break
 
-                                                            @default
-                                                                <td class="px-4 py-3 border-r"></td>
-                                                    @endswitch
-                                                    --}}
-                                                @endforeach
-                                            @else
-                                                <td class="px-4 py-3 border-r"></td>
-                                            @endif
+                                                                    @default
+                                                                        <td class="px-4 py-3 border-r"></td>
+                                                            @endswitch
+                                                            --}}
+                                                        @endforeach                                            
+                                                    @endif
+                                                </div>
+                                            </td>
+
                                             <td class="px-4 py-3 border-r">
                                                 <div class="flex items-center justify-center space-x-2">                                                 
                                                     @if (!empty($data['boletas_ids']))
