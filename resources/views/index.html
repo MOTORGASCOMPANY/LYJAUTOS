@@ -1,627 +1,558 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- Basic -->
+<html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&J Autos | Certificaciones GLP/GNV Conversiones y Revisiones Anuales</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.png" /> <!--imagenparaicono-->
+    <meta name="keywords" content="LyJ AUTOS, certificadora GLP y GNV, conversión a gas vehicular, revisiones anuales GNV, taller GLP Perú, certificado MTC gas">
+    <meta name="description" content="LyJ AUTOS es una entidad certificadora autorizada por el MTC. Especialistas en conversiones y revisiones anuales de GNV y GLP en Perú. Seguridad y calidad garantizada.">
+    <meta name="author" content="LyJ AUTOS">
 
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <!-- Site Metas -->
-    <title>MOTORGAS COMPANY®</title>
-    <link rel="icon" type="image/x-icon" href="images/images/mtg.png" /> <!--imagenparaicono-->
-    <meta name="keywords" content="Motorgas, certificadora GNV, conversión a gas vehicular, revisiones anuales GNV, taller GLP Perú, certificado MTC gas">
-    <meta name="description" content="Motorgas es una entidad certificadora autorizada por el MTC. Especialistas en conversiones y revisiones anuales de GNV y GLP en Perú. Seguridad y calidad garantizada.">
-    <meta name="author" content="Motorgas Peru">
-
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="#" />
-
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap 5 CSS Local -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- Pogo Slider CSS -->
-    <link rel="stylesheet" href="css/pogo-slider.min.css" />
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css" />
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css" />
-    <!-- chatbot-->
-    <script src="//code.tidio.co/nt1hj1dqcywycjxg0fkuqm8ayjuw1hjq.js" async></script>
 
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- Animate.css para animaciones modernas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <!-- Estilos personalizados propios de L&J Autos -->
+    <link rel="stylesheet" href="css/web.css">
 </head>
 
-<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+<body class="bg-light">
 
-    <!-- LOADER -->
-    <div id="preloader">
-        <div class="loader">
-            <img src="images/images/loader.gif" alt="#" />
+    <!-- Navbar Corporativo con Logo -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#inicio">
+                <!-- Logo de la empresa integrado -->
+                <img src="images/logo.png" alt="L&J Autos Logo" width="100" class="me-2 img-fluid">
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#requisitos">Requisitos</a></li>
+                    
+                    <!-- Botón Principal: Cotizar (WhatsApp) -->
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-brand-btn d-flex align-items-center gap-2 px-4 py-2 text-dark font-semibold shadow-sm" href="#contacto">
+                            <i class="bi bi-whatsapp"></i> Cotizar
+                        </a>
+                    </li>
+                    
+                    <!-- Botón Secundario: Iniciar Sesión (Corregido con Bootstrap Icons y variante Outline) -->
+                    <li class="nav-item ms-lg-2 mt-3 mt-lg-0">
+                        <a class="btn btn-outline-light d-flex align-items-center gap-2 px-4 py-2 font-semibold shadow-sm text-white" href="/login">
+                            <i class="bi bi-person-circle text-brand-yellow"></i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </nav>
 
-    <!-- Header -->
-    <header class="top-header">
-        <div class="header_top">
-
-            <div class="container">
-                <div class="row">
-                    <div class="logo_section">
-                        <a class="navbar-brand" href="index"><img src="images/images/logo.png" height="60"
-                                alt="image"></a><!--sin el .html-->
+    <!-- HERO / BANNER PRINCIPAL -->
+    <section id="inicio" class="min-vh-100 d-flex align-items-center bg-dark text-white position-relative py-5" style="background: linear-gradient(rgba(17, 24, 39, 0.85), rgba(17, 24, 39, 0.95)), url('https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1920') no-repeat center center/cover;">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Texto Principal -->
+                <div class="col-lg-7 text-center text-lg-start animate__animated animate__fadeInLeft">
+                    <span class="badge bg-success px-3 py-2 rounded-pill mb-3 fw-semibold tracking-wider text-uppercase">
+                        <i class="bi bi-patch-check-fill me-1"></i> Certificadora Autorizada
+                    </span>
+                    <h1 class="display-4 display-md-3 fw-bold mb-4 lh-sm">
+                        Garantiza la Seguridad de tu Vehículo con <span class="text-success-custom">L&J Autos</span>
+                    </h1>
+                    <p class="lead text-gray-300 mb-4 fs-5 style-desc">
+                        Especialistas en la certificación de conversiones y revisiones anuales de GLP. Nos comprometemos con la seguridad de tu camino y el cuidado del medio ambiente a través de un riguroso control técnico.
+                    </p>
+                    
+                    <!-- Bloque de botones corregido y responsive -->
+                    <div class="mb-3">
+                        <a href="#contacto" class="btn btn-success btn-lg px-4 py-3 fw-bold shadow-sm transition-all hover-scale me-3 mb-2 d-inline-block">
+                            <i class="bi bi-whatsapp me-2"></i> Reservar Cita / Cotizar
+                        </a>
+                        <a href="#servicios" class="btn btn-outline-light btn-lg px-4 py-3 fw-medium mb-2 d-inline-block">
+                            Ver Servicios <i class="bi bi-arrow-right ms-2"></i>
+                        </a>
                     </div>
-                    <div class="site_information">
-                        <ul>
-                            <li><a href="mailto:admin@motorgasperu.com"><img src="images/mail_icon.png"
-                                        alt="#" />admin@motorgasperu.com</a></li>
-                            <li><a href="https://wa.me/931719175"><img src="images/phone_icon.png"
-                                        alt="#" />(+51)931719175</a></li>
-                            <li>                                
-                                <a class="join_bt mr-2" href="/asistencia">Asistencia</a>
-                                <a class="join_bt" href="/login">Iniciar Sesión</a>
-                            </li>
-                        </ul>
+                </div>
+                
+                <!-- Tarjeta Lateral de Acceso Rápido -->
+                <div class="col-lg-5 animate__animated animate__fadeInRight">
+                    <div class="card bg-glass text-white border-0 shadow-lg backdrop-blur rounded-2xl p-4 mx-auto" style="max-width: 480px;">
+                        <div class="card-body p-1">
+                            <h3 class="fw-bold mb-4 text-center fs-4">¿Qué trámite necesitas?</h3>
+                            <div class="d-flex flex-column gap-3">                                
+                                <!-- Opción 1: Revisión Anual -->
+                                <div class="p-3 bg-white-10 rounded-xl d-flex align-items-center hover-bg-success transition-all cursor-pointer">
+                                    <div class="icon-shape bg-success rounded-lg p-3 me-3 flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                        <i class="bi bi-file-earmark-check fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1 fw-bold text-white">Revisión Anual GLP</h6>
+                                        <small class="text-white-50 d-block lh-sm">Mantén tu certificado al día vigente.</small>
+                                    </div>
+                                </div>                                
+                                <!-- Opción 2: Certificación Inicial -->
+                                <div class="p-3 bg-white-10 rounded-xl d-flex align-items-center hover-bg-success transition-all cursor-pointer">
+                                    <div class="icon-shape bg-primary rounded-lg p-3 me-3 flex-shrink-0 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                        <i class="bi bi-tools fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1 fw-bold text-white">Certificación Inicial</h6>
+                                        <small class="text-white-50 d-block lh-sm">Para vehículos recién convertidos.</small>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="mt-4 pt-3 border-top border-white-10 text-center text-white-50 fs-7">
+                                <i class="bi bi-clock me-1"></i> Atención inmediata sin colas extensas.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="header_bottom">
-            <div class="container">
-                <div class="col-sm-12">
-                    <div class="menu_orange_section" style="background: #ff880e;">
-                        <nav class="navbar header-nav navbar-expand-lg">
-                            <div class="menu_section">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                                    data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false"
-                                    aria-label="Toggle navigation">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
-                                    <ul class="navbar-nav">
-                                        <li><a class="nav-link active" href="index">Inicio</a></li>
-                                        <li><a class="nav-link" href="about">Nosotros</a></li>
-                                        <li><a class="nav-link" href="services">Servicios</a></li>
-                                        <li><a class="nav-link" href="contact">Contacto</a></li>
-                                    </ul>
+    </section>
+
+    <!-- SECCIÓN NOSOTROS -->
+    <section id="nosotros" class="py-5 bg-white">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                
+                <!-- Imagen / Composición Visual -->
+                <div class="col-lg-6 animate__animated animate__fadeInLeft">
+                    <div class="position-relative">
+                        <!-- Imagen principal del taller -->
+                        <img src="images/glp.webp" alt="Taller L&J Autos" class="img-fluid rounded-3xl shadow-lg">
+                        
+                        <!-- Tarjeta flotante de experiencia rápida -->
+                        <div class="position-absolute bottom-0 end-0 bg-dark text-white p-4 rounded-2xl shadow-lg m-3 border border-white-10 backdrop-blur d-none d-sm-block" style="max-width: 220px; --bs-bg-opacity: 0.9;">
+                            <div class="d-flex align-items-center mb-2">
+                                <i class="bi bi-speedometer2 text-brand-yellow fs-2 me-2"></i>
+                                <span class="h2 fw-bold text-brand-yellow mb-0">100%</span>
+                            </div>
+                            <p class="small text-gray-300 mb-0 lh-sm">Garantía en aprobaciones y revisiones técnicas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Texto Informativo -->
+                <div class="col-lg-6 animate__animated animate__fadeInRight">
+                    <div class="ps-lg-4">
+                        <span class="text-uppercase fw-bold text-brand-orange tracking-wider fs-7 d-block mb-2">Sobre Nuestra Empresa</span>
+                        <h2 class="display-5 fw-bold text-dark mb-4">Líderes en Certificación Vehicular GLP y GNV</h2>
+                        <p class="text-muted mb-4 fs-5">
+                            En <strong>L&J Autos</strong> nos dedicamos a ofrecer soluciones integrales para el transporte eficiente. Somos un taller y centro de certificación autorizado que valida conversiones vehiculares con los más altos estándares de calidad.
+                        </p>
+                        
+                        <!-- Lista de características con iconos -->
+                        <div class="row g-4 mt-2">
+                            <!-- Característica 1 -->
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-start">
+                                    <div class="bg-light text-success p-2 rounded-lg me-3 flex-shrink-0">
+                                        <i class="bi bi-shield-fill-check fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold text-dark mb-1">Autorizados</h5>
+                                        <p class="text-muted small mb-0">Certificados válidos a nivel nacional ante las entidades reguladoras.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </nav>
-                        <div class="search-box">
-                            <input type="text" class="search-txt" placeholder="Search">
-                            <a class="search-btn">
-                                <img src="images/search_icon.png" alt="#" />
+
+                            <!-- Característica 2 -->
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-start">
+                                    <div class="bg-light text-primary p-2 rounded-lg me-3 flex-shrink-0">
+                                        <i class="bi bi-lightning-charge-fill fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold text-dark mb-1">Trámite Ágil</h5>
+                                        <p class="text-muted small mb-0">Inspecciones rigurosas pero eficientes para cuidar tu tiempo.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Característica 3 -->
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-start">
+                                    <div class="bg-light text-brand-yellow p-2 rounded-lg me-3 flex-shrink-0">
+                                        <i class="bi bi-tools fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold text-dark mb-1">Soporte Técnico</h5>
+                                        <p class="text-muted small mb-0">Ingenieros y técnicos calificados evaluando tu unidad.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Característica 4 -->
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-start">
+                                    <div class="bg-light text-danger p-2 rounded-lg me-3 flex-shrink-0">
+                                        <i class="bi bi-piggy-bank-fill fs-4"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold text-dark mb-1">Ahorro Seguro</h5>
+                                        <p class="text-muted small mb-0">Te ayudamos a mantener tu vehículo rindiendo al máximo costo.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN SERVICIOS -->
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container py-4">
+            
+            <!-- Cabecera de la Sección -->
+            <div class="text-center max-w-600 mx-auto mb-5 animate__animated animate__fadeIn">
+                <span class="text-uppercase fw-bold text-brand-orange tracking-wider fs-7 d-block mb-2">Nuestras Especialidades</span>
+                <h2 class="display-6 fw-bold text-dark mb-3">Servicios de Certificación y Control Técnico</h2>
+                <p class="text-muted">
+                    Ofrecemos un catálogo completo de revisiones y validaciones autorizadas para que tu vehículo circule de manera legal, segura y económica.
+                </p>
+            </div>
+
+            <!-- Grilla de Servicios -->
+            <div class="row g-4">
+                
+                <!-- Servicio 1: Revisión Anual GLP -->
+                <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp">
+                    <div class="card h-100 border-0 shadow-sm rounded-2xl overflow-hidden card-service transition-all">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="bg-success-light text-success p-3 rounded-xl mb-4 d-inline-flex align-self-start">
+                                <i class="bi bi-calendar-check fs-3"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-3">Revisión Anual GLP</h4>
+                            <p class="text-muted small flex-grow-1">
+                                Inspección técnica obligatoria para renovar la vigencia de tu certificado de GLP. Evaluamos la hermeticidad del sistema y el estado de los componentes para tu seguridad.
+                            </p>
+                            <hr class="text-black-50 my-3">
+                            <div class="d-flex align-items-center justify-content-between mt-auto">
+                                <span class="text-success fw-semibold small"><i class="bi bi-clock me-1"></i> Rápido e inmediato</span>
+                                <a href="#contacto" class="btn btn-sm btn-outline-dark rounded-lg px-3">Cotizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Certificación Inicial GNV/GLP -->
+                <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                    <div class="card h-100 border-0 shadow-sm rounded-2xl overflow-hidden card-service transition-all">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="bg-primary-light text-primary p-3 rounded-xl mb-4 d-inline-flex align-self-start">
+                                <i class="bi bi-file-earmark-medical fs-3"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-3">Certificación Inicial</h4>
+                            <p class="text-muted small flex-grow-1">
+                                ¿Acabas de instalar un sistema de gas? Emitimos el certificado oficial inicial requerido para realizar el cambio de combustible en la tarjeta de identificación vehicular.
+                            </p>
+                            <hr class="text-black-50 my-3">
+                            <div class="d-flex align-items-center justify-content-between mt-auto">
+                                <span class="text-primary fw-semibold small"><i class="bi bi-patch-check me-1"></i> Oficial y Autorizado</span>
+                                <a href="#contacto" class="btn btn-sm btn-outline-dark rounded-lg px-3">Cotizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Duplicados y Modificaciones -->
+                <div class="col-md-6 col-lg-4 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div class="card h-100 border-0 shadow-sm rounded-2xl overflow-hidden card-service transition-all">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="bg-warning-light text-brand-orange p-3 rounded-xl mb-4 d-inline-flex align-self-start">
+                                <i class="bi bi-arrow-repeat fs-3"></i>
+                            </div>
+                            <h4 class="fw-bold text-dark mb-3">Duplicados y Chips</h4>
+                            <p class="text-muted small flex-grow-1">
+                                Gestión y emisión de duplicados de certificados vehiculares perdidos o deteriorados, así como la revisión técnica para la lectura o reposición del chip de abastecimiento.
+                            </p>
+                            <hr class="text-black-50 my-3">
+                            <div class="d-flex align-items-center justify-content-between mt-auto">
+                                <span class="text-brand-orange fw-semibold small"><i class="bi bi-cpu me-1"></i> Validación de Chip</span>
+                                <a href="#contacto" class="btn btn-sm btn-outline-dark rounded-lg px-3">Cotizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN REQUISITOS -->
+    <section id="requisitos" class="py-5 bg-white">
+        <div class="container py-4">
+            
+            <!-- Cabecera de la Sección -->
+            <div class="text-center max-w-600 mx-auto mb-5 animate__animated animate__fadeIn">
+                <span class="text-uppercase fw-bold text-brand-orange tracking-wider fs-7 d-block mb-2">¿Qué necesitas traer?</span>
+                <h2 class="display-6 fw-bold text-dark mb-3">Requisitos para tu Trámite Vehicular</h2>
+                <p class="text-muted">
+                    Prepara la documentación necesaria antes de visitarnos para garantizar una atención fluida, rápida y sin contratiempos.
+                </p>
+            </div>
+
+            <!-- Navegación de Pestañas (Tabs) -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8 col-lg-6">
+                    <ul class="nav nav-pills nav-justified bg-light p-1 rounded-xl shadow-sm" id="requirementsTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-bold rounded-lg py-2" id="annual-tab" data-bs-toggle="tab" data-bs-target="#annual-pane" type="button" role="tab" aria-controls="annual-pane" aria-selected="true">
+                                <i class="bi bi-calendar-check me-2"></i>Revisión Anual
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-bold rounded-lg py-2" id="initial-tab" data-bs-toggle="tab" data-bs-target="#initial-pane" type="button" role="tab" aria-controls="initial-pane" aria-selected="false">
+                                <i class="bi bi-file-earmark-plus me-2"></i>Certificación Inicial
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contenido de las Pestañas -->
+            <div class="tab-content" id="requirementsTabContent">
+                
+                <!-- Pestaña 1: Requisitos Revisión Anual -->
+                <div class="tab-pane fade show active" id="annual-pane" role="tabpanel" aria-labelledby="annual-tab" tabindex="0">
+                    <div class="row g-4 justify-content-center mt-2">
+                        <div class="col-lg-8">
+                            <div class="card border-0 bg-light p-4 rounded-2xl">
+                                <h4 class="fw-bold text-dark mb-4 d-flex align-items-center">
+                                    <i class="bi bi-check2-circle text-success me-2 fs-3"></i> Documentos para Renovación Anual GLP/GNV
+                                </h4>
+                                <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                    <li class="d-flex align-items-start bg-white p-3 rounded-xl shadow-xs">
+                                        <div class="text-success me-3 fs-5"><i class="bi bi-file-earmark-vcard"></i></div>
+                                        <div>
+                                            <strong class="text-dark d-block mb-1">Tarjeta de Identificación Vehicular (TIV)</strong>
+                                            <span class="text-muted small">Física o en formato digital QR oficial emitida por la SUNARP.</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start bg-white p-3 rounded-xl shadow-xs">
+                                        <div class="text-success me-3 fs-5"><i class="bi bi-person-badge"></i></div>
+                                        <div>
+                                            <strong class="text-dark d-block mb-1">Documento Nacional de Identidad (DNI)</strong>
+                                            <span class="text-muted small">Del propietario del vehículo o del conductor encargado de realizar el trámite.</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start bg-white p-3 rounded-xl shadow-xs">
+                                        <div class="text-success me-3 fs-5"><i class="bi bi-shield-exclamation"></i></div>
+                                        <div>
+                                            <strong class="text-dark d-block mb-1">Certificado de Gas del Año Anterior</strong>
+                                            <span class="text-muted small">Para validar el historial técnico de la unidad y contrastar la lectura previa de componentes.</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start bg-white p-3 rounded-xl shadow-xs">
+                                        <div class="text-success me-3 fs-5"><i class="bi bi-car-front"></i></div>
+                                        <div>
+                                            <strong class="text-dark d-block mb-1">Vehículo en condiciones óptimas</strong>
+                                            <span class="text-muted small">La unidad debe contar con el motor estable en gasolina para poder realizar el test alterno de emisiones correctamente.</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pestaña 2: Requisitos Certificación Inicial -->
+                <div class="tab-pane fade" id="initial-pane" role="tabpanel" aria-labelledby="initial-tab" tabindex="0">
+                    <div class="row g-4 justify-content-center mt-2">
+                        <div class="col-lg-8">
+                            <div class="card border-0 bg-light p-4 rounded-2xl">
+                                <h4 class="fw-bold text-dark mb-4 d-flex align-items-center">
+                                    <i class="bi bi-plus-circle text-primary me-2 fs-3"></i> Documentos para Primera Certificación (Post-Conversión)
+                                </h4>
+                                <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
+                                    <li class="d-flex align-items-start bg-white p-3 rounded-xl shadow-xs">
+                                        <div class="text-primary me-3 fs-5"><i class="bi bi-file-earmark-vcard"></i></div>
+                                        <div>
+                                            <strong class="text-dark d-block mb-1">Tarjeta de Propiedad / TIV Original</strong>
+                                            <span class="text-muted small">Documento indispensable para asentar la base de datos de la conversión inicial.</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start bg-white p-3 rounded-xl shadow-xs">
+                                        <div class="text-primary me-3 fs-5"><i class="bi bi-receipt"></i></div>
+                                        <div>
+                                            <strong class="text-dark d-block mb-1">Boleta o Factura de la Conversión</strong>
+                                            <span class="text-muted small">Comprobante de pago emitido por el taller instalador autorizado que detalla los componentes montados.</span>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex align-items-start bg-white p-3 rounded-xl shadow-xs">
+                                        <div class="text-primary me-3 fs-5"><i class="bi bi-file-earmark-text"></i></div>
+                                        <div>
+                                            <strong class="text-dark d-block mb-1">Ficha Técnica de los Componentes</strong>
+                                            <span class="text-muted small">Certificados de conformidad del tanque y del regulador de gas instalados.</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN CONTACTO / COTIZACIÓN -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container py-4">
+            
+            <!-- Cabecera de la Sección -->
+            <div class="text-center max-w-600 mx-auto mb-5 animate__animated animate__fadeIn">
+                <span class="text-uppercase fw-bold text-brand-orange tracking-wider fs-7 d-block mb-2">¿Listo para empezar?</span>
+                <h2 class="display-6 fw-bold text-dark mb-3">Cotiza tu Certificación o Servicio</h2>
+                <p class="text-muted">
+                    Déjanos tus datos o escríbenos directamente. Nuestro equipo te responderá en la brevedad posible para agendar tu cita.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                
+                <!-- Columna Izquierda: Información de Contacto Directo -->
+                <div class="col-lg-5 animate__animated animate__fadeInLeft">
+                    <div class="card bg-dark text-white p-4 h-100 rounded-2xl border-0 shadow d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-brand-yellow mb-3">Información</h4>
+                            <p class="text-white-50 small mb-4">
+                                Visítanos en nuestro local autorizado.
+                            </p>
+                            
+                            <!-- Bloques de datos rápidos -->
+                            <div class="d-flex flex-column gap-3 mb-4">
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-white-10 text-brand-yellow p-2 rounded-lg me-3 flex-shrink-0">
+                                        <i class="bi bi-geo-alt-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <span class="d-block small text-white-50">Dirección</span>
+                                        <strong class="small text-white">jr. San Pedro de Carabayllo N° 158 - Carabayllo</strong>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-white-10 text-brand-yellow p-2 rounded-lg me-3 flex-shrink-0">
+                                        <i class="bi bi-clock-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <span class="d-block small text-white-50">Horario de Atención</span>
+                                        <strong class="small text-white">Lun a Vie: 8:00 AM - 6:00 PM | Sáb: 8:00 AM - 1:00 PM</strong>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-white-10 text-brand-yellow p-2 rounded-lg me-3 flex-shrink-0">
+                                        <i class="bi bi-telephone-fill fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <span class="d-block small text-white-50">Teléfono / Soporte</span>
+                                        <strong class="small text-white">+51 910 330 375</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón de WhatsApp Directo Completo -->
+                        <div class="mt-4">
+                            <a href="https://wa.me/51910330375?text=Hola%20L%26J%20Autos,%20deseo%20cotizar%20una%20certificaci%C3%B3n." target="_blank" class="btn btn-success w-100 py-3 fw-bold rounded-xl d-flex align-items-center justify-content-center gap-2 shadow-sm transition-all hover-scale">
+                                <i class="bi bi-whatsapp fs-5"></i> Chatear por WhatsApp
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
 
-    <!-- Inicio -->
-    <div class="ulockd-home-slider">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="pogoSlider" id="js-main-slider">
-                    <div class="pogoSlider-slide" style="background-image:url(images/images/4.avif);">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3><strong>Certificadora</strong><br>Autorizada por el MTC</h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="services">Conoce más</a>
-                                    </div>
+                <!-- Columna Derecha: Formulario Estructurado -->
+                <div class="col-lg-7 animate__animated animate__fadeInRight">
+                    <div class="card border-0 p-4 rounded-2xl shadow-sm bg-white h-100">
+                        <h4 class="fw-bold text-dark mb-4">Envíanos un Mensaje</h4>
+                        
+                        <form action="#" method="POST">
+                            <div class="row g-3">
+                                <!-- Campo: Nombre Completo -->
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label small fw-bold text-secondary">Nombre Completo</label>
+                                    <input type="text" class="form-control rounded-lg py-2" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+                                </div>
+                                
+                                <!-- Campo: Celular -->
+                                <div class="col-md-6">
+                                    <label for="celular" class="form-label small fw-bold text-secondary">Número de Celular</label>
+                                    <input type="tel" class="form-control rounded-lg py-2" id="celular" name="celular" placeholder="Ej. 999123456" required>
+                                </div>
+
+                                <!-- Campo: Placa del Vehículo -->
+                                <div class="col-md-6">
+                                    <label for="placa" class="form-label small fw-bold text-secondary">Placa del Vehículo</label>
+                                    <input type="text" class="form-control rounded-lg py-2 text-uppercase" id="placa" name="placa" placeholder="Ej. ABC-123" maxlength="7" required>
+                                </div>
+
+                                <!-- Campo: Tipo de Servicio -->
+                                <div class="col-md-6">
+                                    <label for="servicio" class="form-label small fw-bold text-secondary">Tipo de Servicio</label>
+                                    <select class="form-select rounded-lg py-2" id="servicio" name="servicio" required>
+                                        <option value="" selected disabled>Selecciona una opción</option>
+                                        <option value="revision_anual_glp">Revisión Anual GLP</option>
+                                        <option value="revision_anual_gnv">Revisión Anual GNV</option>
+                                        <option value="certificacion_inicial">Certificación Inicial</option>
+                                        <option value="duplicado_chip">Duplicado o Validación de Chip</option>
+                                        <option value="otros">Otros Sopores Técnicos</option>
+                                    </select>
+                                </div>
+
+                                <!-- Campo: Mensaje / Comentarios -->
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label small fw-bold text-secondary">Detalles Adicionales (Opcional)</label>
+                                    <textarea class="form-control rounded-lg" id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos brevemente si tienes alguna consulta específica sobre tu vehículo..."></textarea>
+                                </div>
+
+                                <!-- Botón de Envío del Formulario -->
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-brand-btn text-dark w-100 py-3 rounded-xl shadow-sm d-flex align-items-center justify-content-center gap-2">
+                                        <i class="bi bi-send-fill"></i> Enviar Formulario de Cotización
+                                    </button>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="pogoSlider-slide" style="background-image:url(images/images/1.avif);">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="slide_text white_fonts">
-                                        <h3><strong>Conversiones</strong><br>GNV - GLP</h3>
-                                        <br>
-                                        <a class="start_exchange_bt" href="services">Conoce más</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Nosotros -->
-    <div class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="full text_align_right_img">
-                        <img src="images/images/1.png" height="600" width="600" alt="#" />
-                    </div>
-                </div>
-                <div class="col-md-6 layout_padding">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2><span class="theme_color">Nosotros</span> Motorgas</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>MotorGas es una empresa dedicada a la certificación de conversiones y revisiones anuales de GNV,
-                            comprometida con la seguridad vehicular y el cuidado del medio ambiente. Contamos con un equipo
-                             técnico altamente calificado y trabajamos bajo estrictas normativas, brindando confianza y calidad
-                             en cada inspección.</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2><span class="theme_color">Nuestra</span> Filosofía</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Creemos en el país y en su gente, nos abocamos a apoyar a nuestros clientes con la finalidad
-                            de lograr su misión de vida; contribuyendo al progreso de grandes segmentos de la población
-                            con un equipo humano especializado comprometido, creativo, íntegro y entusiasta.</p>
-                    </div>
-                    <!--
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">About more ></a>
-                    </div>
-                    -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mision - Vision -->
-    <div class="section layout_padding about_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2><span class="theme_color">Motorgas</span> Misión</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Asegurar la calidad, seguridad y eficiencia de los sistemas de conversión y
-                            anuales. Trabajamos para garantizar que los vehículos a gas cumplan con las normas y
-                            regulaciones aplicables, y brindamos un servicio eficiente y de calidad a nuestros
-                            clientes.</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2><span class="theme_color">Motorgas</span> Visión</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Nuestra visión es ser reconocidos como líderes en la certificación de sistemas de conversión
-                            y uso de gas natural vehicular a nivel nacional.
-                            Ser líder a nivel nacional en el control de calidad y en las certificaciones vehículos que
-                            funcionan con el sistema de combustión a GNV y GLP
-                        </p>
-                    </div>
-                    <!--
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Read More ></a>
-                    </div>
-                    -->
-                </div>
-                <div class="col-md-6">
-                    <div class="full text_align_right_img">
-                        <img src="images/images/2.jpg" height="500" width="500" alt="#" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- section -->
-    <div class="section layout_padding">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <div class="heading_main text_align_center">
-                            <h2><span class="theme_color"></span>Servicios</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/images/revision.avif" height="250" alt="#" />
-                        <h4>Certificado Modificación</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/images/23.jpg" height="250" alt="#" />
-                        <h4>Certificación GNV</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/images/glp2.jpg" height="250" alt="#" />
-                        <h4>Certificación GLP</h4>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="full services_blog">
-                        <img class="img-responsive" src="images/images/otros.png" height="250" alt="#" />
-                        <h4>Otros mas</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row margin-top_30">
-                <div class="col-sm-12">
-                    <div class="full">
-                        <div class="center">
-                            <a class="main_bt" href="services">Conoce más</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- section -->
-    <div class="section white_fonts" style="background: #2a2a2a;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6" style="background: #fff;">
-                    <div class="full text_align_right_img">
-                        <img src="images/images/organigrama.jpg" height="500" width="950" alt="#" />
-                    </div>
-                </div>
-                <div class="col-md-6 layout_padding">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2><span class="theme_color">Por que elegir</span> Motorgas ?</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>En Motorgas, somos conocidos por nuestra
-                            capacidad para adaptarnos a entornos diversos y complejos.
-
-                            Somos especializados en brindar soluciones a nuestros clientes, nos centramos en ofrecer
-                            un servicio de la talla de representante a precios bastante más competitivos.</p>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Conoce más</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- section -->
-    <div class="section layout_padding about_bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="full paddding_left_15">
-                        <div class="heading_main text_align_left">
-                            <h2>Con Nosotros</h2>
-                        </div>
-                    </div>
-                    <div class="full paddding_left_15">
-                        <p>Encontraras Servicios Profesionales y con el Personal Altamente Calificado, contamos con un
-                            equipo humano altamente calificado y es importante porque nos permite brindar los servicios
-                            de
-                            manera óptima y de calidad. Nuestro personal se encuentra en constante capacitación y
-                            actualización dentro de su área de competencia.</p>
-                    </div>
-                    <!--
-                    <div class="full paddding_left_15">
-                        <a class="main_bt" href="#">Read More ></a>
-                    </div>
-                    -->
-                </div>
-                <div class="col-md-6">
-                    <div class="full text_align_right_img">
-                        <img src="images/images/3.png" height="300" width="400" alt="#" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--banner-->
-    <!-- Nueva sección para las imágenes -->
-    <div class="section layout_padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="https://slcp.mtc.gob.pe" target="_blank">
-                        <img src="images/images/mtc.jpg" height="65" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="http://infogas.com.pe/placa/" target="_blank">
-                        <img src="images/images/cofide.png" height="70" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://motorgasperu.com/login" target="_blank">
-                        <img src="images/images/logo.png" height="70" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3">
-                    <a href="https://www.sistemainfogas.com.pe/CertificadorSuite/Default.aspx" target="_blank">
-                        <img src="images/images/gasolution.PNG" href="" height="70" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- section -->
-    <div class="section layout_padding padding_top_0">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="full">
-                        <div class="heading_main text_align_center">
-                            <h2><span class="theme_color"></span>Contactanos</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- contact_form -->
-    <div class="section contact_form">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-12 offset-lg-3">
-                    <div class="full">
-                        <form class="contact_form_inner" action="#">
-                            <fieldset>
-                                <div class="field">
-                                    <input type="text" name="name" placeholder="Nombres Completos" />
-                                </div>
-                                <div class="field">
-                                    <input type="email" name="email" placeholder="Correo" />
-                                </div>
-                                <div class="field">
-                                    <input type="text" name="phone_no" placeholder="Celular" />
-                                </div>
-                                <div class="field">
-                                    <textarea placeholder="Mensaje"></textarea>
-                                </div>
-                                <div class="field center">
-                                    <button>ENVIAR</button>
-                                </div>
-                            </fieldset>
                         </form>
+                        
                     </div>
                 </div>
+
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Start Footer -->
-    <footer class="footer-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 white_fonts">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="full">
-                                <img class="img-responsive" src="images/images/logo.png" height="80" alt="#" />
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="full">
-                                <h3>Links</h3>
-                            </div>
-                            <div class="full">
-                                <ul class="menu_footer">
-                                    <li><a href="index">> Inicio</a></li>
-                                    <li><a href="about">> Nosotros</a></li>
-                                    <li><a href="services">> Servicios</a></li>
-                                    <li><a href="contact">> Contacto</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="full">
-                                <div class="footer_blog full white_fonts">
-                                    <h3>Boletin informativo</h3>
-                                    <p>Es muy importante que el cliente siga el proceso de coaching.</p>
-                                    <div class="newsletter_form">
-                                        <form action="index">
-                                            <input type="email" placeholder="Correo..." name="#" required="">
-                                            <button>Enviar</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="full">
-                                <div class="footer_blog full white_fonts">
-                                    <h3>Contacto </h3>
-                                    <ul class="full">
-                                        <li><img src="images/i5.png"><span>jr. San Pedro de Carabayllo <br>
-                                                N° 180 - Carabayllo</span></li>
-                                        <li><a href="mailto:admin@motorgasperu.com"><img src="images/i6.png"
-                                                    alt="#" />admin@motorgasperu.com</a></li>
-                                        <li><a href="https://wa.me/931719175"><img src="images/i7.png"
-                                                    alt="#" />931719175</a></li>
-                                        <!--li><img src="images/i8.png"><span>Horario: Lunes a Viernes de 8:00am – 5:00pm. <br>
-                                            Sábados de 8:00 am – 2:00 pm.</span></li-->
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- PIE DE PÁGINA (FOOTER) RÁPIDO -->
+    <footer class="py-4 bg-dark text-white border-top border-white-10">
+        <div class="container text-center">
+            <p class="small text-white-50 mb-0">
+                &copy; 2026 L&J Autos. Todos los derechos reservados. Certificaciones e Inspecciones Autorizadas.
+            </p>
         </div>
     </footer>
-    <!-- End Footer -->
 
-    <div class="footer_bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <p class="crp">© Motorgas Company Privacy Policy - Derechos reservados Powered by GHFDEV ®</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Icono para subir a inicio -->
-    <a href="#" id="scroll-to-top" class="hvr-radial-out">
-        <i class="fa fa-angle-up"></i>
-    </a>
-
-    <!-- Icono flotante de WhatsApp -->
-    <!--
-    <a class="whatsapp-float" href="https://wa.me/931719175" target="_blank" rel="noopener noreferrer">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i> 
-    </a>
-    -->
-
-    <!-- ALL JS FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- ALL PLUGINS -->
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.pogo-slider.min.js"></script>
-    <script src="js/slider-index.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/form-validator.min.js"></script>
-    <script src="js/contact-form-script.js"></script>
-    <script src="js/isotope.min.js"></script>
-    <script src="js/images-loded.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-        /* counter js */
-
-        (function ($) {
-            $.fn.countTo = function (options) {
-                options = options || {};
-
-                return $(this).each(function () {
-                    // set options for current element
-                    var settings = $.extend({}, $.fn.countTo.defaults, {
-                        from: $(this).data('from'),
-                        to: $(this).data('to'),
-                        speed: $(this).data('speed'),
-                        refreshInterval: $(this).data('refresh-interval'),
-                        decimals: $(this).data('decimals')
-                    }, options);
-
-                    // how many times to update the value, and how much to increment the value on each update
-                    var loops = Math.ceil(settings.speed / settings.refreshInterval),
-                        increment = (settings.to - settings.from) / loops;
-
-                    // references & variables that will change with each update
-                    var self = this,
-                        $self = $(this),
-                        loopCount = 0,
-                        value = settings.from,
-                        data = $self.data('countTo') || {};
-
-                    $self.data('countTo', data);
-
-                    // if an existing interval can be found, clear it first
-                    if (data.interval) {
-                        clearInterval(data.interval);
-                    }
-                    data.interval = setInterval(updateTimer, settings.refreshInterval);
-
-                    // initialize the element with the starting value
-                    render(value);
-
-                    function updateTimer() {
-                        value += increment;
-                        loopCount++;
-
-                        render(value);
-
-                        if (typeof (settings.onUpdate) == 'function') {
-                            settings.onUpdate.call(self, value);
-                        }
-
-                        if (loopCount >= loops) {
-                            // remove the interval
-                            $self.removeData('countTo');
-                            clearInterval(data.interval);
-                            value = settings.to;
-
-                            if (typeof (settings.onComplete) == 'function') {
-                                settings.onComplete.call(self, value);
-                            }
-                        }
-                    }
-
-                    function render(value) {
-                        var formattedValue = settings.formatter.call(self, value, settings);
-                        $self.html(formattedValue);
-                    }
-                });
-            };
-
-            $.fn.countTo.defaults = {
-                from: 0,               // the number the element should start at
-                to: 0,                 // the number the element should end at
-                speed: 1000,           // how long it should take to count between the target numbers
-                refreshInterval: 100,  // how often the element should be updated
-                decimals: 0,           // the number of decimal places to show
-                formatter: formatter,  // handler for formatting the value before rendering
-                onUpdate: null,        // callback method for every time the element is updated
-                onComplete: null       // callback method for when the element finishes updating
-            };
-
-            function formatter(value, settings) {
-                return value.toFixed(settings.decimals);
-            }
-        }(jQuery));
-
-        jQuery(function ($) {
-            // custom formatting example
-            $('.count-number').data('countToOptions', {
-                formatter: function (value, options) {
-                    return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
-                }
-            });
-
-            // start all the timers
-            $('.timer').each(count);
-
-            function count(options) {
-                var $this = $(this);
-                options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-                $this.countTo(options);
-            }
-        });
-    </script>
+    <!-- Scripts de Bootstrap 5 locales -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/web.js"></script>
 </body>
 
 </html>

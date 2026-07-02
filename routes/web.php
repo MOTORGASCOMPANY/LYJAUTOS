@@ -131,21 +131,22 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return redirect()->to('/login');
-});
+});*/
 
 //Route::get('register',[Auth::class, 'showLoginForm'])->name('register');
 
 
 // Rutas para las vistas públicas (Pagina Web)
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('index');
 });
 Route::get('index', function () {
     return view('index');
 });
-Route::get('about', function () {
+
+/*Route::get('about', function () {
     return view('about');
 });
 Route::get('services', function () {
